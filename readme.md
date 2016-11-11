@@ -8,9 +8,18 @@ For responsive images in Jekyll, take a look at [Jekyll Picture Tag](https://git
 
 ## Installation
 
-Jekyll Image Tag requires [Jekyll](http://jekyllrb.com) `>=1.0`, [Minimagick](https://github.com/minimagick/minimagick) `>=3.6`, and [Imagemagick](http://www.imagemagick.org/script/index.php).
+1. Add the following to your site's `Gemfile`:
 
-Once you have the requirements installed, copy image_tag.rb into your Jekyll _plugins folder.
+```
+gem 'jekyll-image-tag', git: 'https://github.com/sawyerh/jekyll-image-tag'
+```
+
+2. Add the following to your site's `_config.yml`:
+
+```yaml
+gems:
+  - jekyll-image-tag
+```
 
 ## Usage
 

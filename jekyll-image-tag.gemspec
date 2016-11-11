@@ -30,5 +30,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'jekyll', ['>= 1.0', '<= 4.0']
-  spec.add_runtime_dependency 'mini_magick', ['>= 4.0', '<= 5.0']
+  spec.add_runtime_dependency 'mini_magick', ['>= 3.6', '<= 5.0']
 end

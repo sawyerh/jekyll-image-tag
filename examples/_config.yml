@@ -3,7 +3,7 @@
 name: A Jekyll blog
 pygments: true
 
-image:
+image_tag:
   source: assets/images/_fullsize
   output: generated
   presets:

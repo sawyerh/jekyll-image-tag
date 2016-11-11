@@ -14,7 +14,7 @@ Once you have the requirements installed, copy image_tag.rb into your Jekyll _pl
 
 ## Usage
 
-There are two parts to Jekyll Image Tag: 
+There are two parts to Jekyll Image Tag:
 
 - [Liquid Tag](#liquid-tag)
 - [Configuration](#configuration)
@@ -25,7 +25,7 @@ There are two parts to Jekyll Image Tag:
 {% image [preset or WxH] path/to/img.jpg [attr="value"] %}
 ```
 
-The tag takes a mix of user input and pointers to configuration settings. 
+The tag takes a mix of user input and pointers to configuration settings.
 
 #### image
 
@@ -54,7 +54,7 @@ Jekyll Image Tag stores settings in an `image` key in your _config.yml.
 **Example settings**
 
 ```yml
-image:
+image_tag:
   source: assets/images/_fullsize
   output: generated
   presets:
@@ -70,7 +70,7 @@ image:
 
 #### source
 
-To make writing tags easier you can specify a source directory for your assets. Base images in the tag will be relative to the `source` directory. 
+To make writing tags easier you can specify a source directory for your assets. Base images in the tag will be relative to the `source` directory.
 
 For example, if `source` is set to `assets/images/_fullsize`, the tag `{% image stevenson/dream.jpg alt="A night scene" %}` will look for a file at `assets/images/_fullsize/stevenson/dream.jpg`.
 
@@ -78,7 +78,7 @@ Defaults to the site source directory.
 
 #### output
 
-Jekyll Image Tag generates resized images to the `output` directory in your compiled site. The organization of your `source` directory is maintained in the output directory. 
+Jekyll Image Tag generates resized images to the `output` directory in your compiled site. The organization of your `source` directory is maintained in the output directory.
 
 Defaults to `{compiled Jekyll site}/generated`.
 
@@ -86,7 +86,7 @@ Defaults to `{compiled Jekyll site}/generated`.
 
 #### presets
 
-Presets contain reusable settings for a Jekyll Image Tag. 
+Presets contain reusable settings for a Jekyll Image Tag.
 
 For example, a `users` preset might set image dimensions, a class, and some metadata attributes needed for all user pictures. If the design changes, you can edit the `users` preset and the new settings will apply to every tag that references it.
 
@@ -132,12 +132,12 @@ Resizing images is a good first step to improve performance, but you should stil
 
 ## Contribute
 
-Report bugs and feature proposals in the [Github issue tracker](https://github.com/robwierzbowski/jekyll-image-tag/issues). In lieu of a formal styleguide, take care to maintain the existing coding style. 
+Report bugs and feature proposals in the [Github issue tracker](https://github.com/robwierzbowski/jekyll-image-tag/issues). In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-0.1.2, Aug 4, 2013: Bugfixes.  
-0.1.1, July 17, 2013: Refactor, add Liquid parsing.  
+0.1.2, Aug 4, 2013: Bugfixes.
+0.1.1, July 17, 2013: Refactor, add Liquid parsing.
 0.1.0, July 14, 2013: Initial release.
 
 ## License

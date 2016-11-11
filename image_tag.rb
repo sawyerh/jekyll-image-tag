@@ -3,9 +3,9 @@
 #
 # Description: Better images for Jekyll.
 #
-# Download: https://github.com/robwierzbowski/jekyll-image-tag
-# Documentation: https://github.com/robwierzbowski/jekyll-image-tag/readme.md
-# Issues: https://github.com/robwierzbowski/jekyll-image-tag/issues
+# Download: https://github.com/sawyerh/jekyll-image-tag
+# Documentation: https://github.com/sawyerh/jekyll-image-tag/readme.md
+# Issues: https://github.com/sawyerh/jekyll-image-tag/issues
 #
 # Syntax:  {% image [preset or WxH] path/to/img.jpg [attr="value"] %}
 # Example: {% image poster.jpg alt="The strange case of Dr. Jekyll" %}
@@ -35,9 +35,12 @@ module Jekyll
 
       # Gather settings
       site = context.registers[:site]
-      settings = site.config['image']
+      settings = site.config['image_tag']
+
+      raise "'image_tag' _config.yml is missing, this is required for jekyll-image-tag" unless settings
+
       markup = /^(?:(?<preset>[^\s.:\/]+)\s+)?(?<image_src>[^\s]+\.[a-zA-Z0-9]{3,4})\s*(?<html_attr>[\s\S]+)?$/.match(render_markup)
-      preset = settings['presets'][ markup[:preset] ]
+      preset = settings['presets'] ? settings['presets'][markup[:preset]] : nil
 
       raise "Image Tag can't read this tag. Try {% image [preset or WxH] path/to/img.jpg [attr=\"value\"] %}." unless markup
 
